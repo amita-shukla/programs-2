@@ -12,7 +12,7 @@ Example 2:
 Input: n = 1
 Output: ["()"]
  */
-public class GenerateParenthesis {
+public class BTGenerateParenthesis {
 	ArrayList<String> res;
 	public List<String> generateParenthesis(int n){
 		res = new ArrayList<>();
@@ -31,7 +31,7 @@ public class GenerateParenthesis {
 	}
 
 	public static void main(String[] args) {
-		GenerateParenthesis obj = new GenerateParenthesis();
+		BTGenerateParenthesis obj = new BTGenerateParenthesis();
 		System.out.println(obj.generateParenthesis(1));
 		System.out.println(obj.generateParenthesis(2));
 		System.out.println(obj.generateParenthesis(3));
