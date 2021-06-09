@@ -21,8 +21,10 @@ public class BTGenerateParenthesis {
 	}
 
 	public void generate(int n, int open, int closed, String partial){
-		if(open==n && closed==n)
+		if(open==n && closed==n) {
 			res.add(partial);
+			return;
+		}
 
 		if(open > n || open<closed) return;
 
