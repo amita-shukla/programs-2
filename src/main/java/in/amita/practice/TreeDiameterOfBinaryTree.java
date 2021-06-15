@@ -13,6 +13,8 @@
  * Input: root = [1,2]
  * Output: 1
  */
+
+package in.amita.practice;
 public class TreeDiameterOfBinaryTree {
 
     int maxDiameterSoFar;
