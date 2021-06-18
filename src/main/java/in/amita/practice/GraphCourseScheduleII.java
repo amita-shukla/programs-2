@@ -19,7 +19,7 @@ Example 3:
 Input: numCourses = 1, prerequisites = []
 Output: [0]
  */
-public class CourseScheduleII {
+public class GraphCourseScheduleII {
     Graph g;
     state[] visited;
     boolean hasCycle;
