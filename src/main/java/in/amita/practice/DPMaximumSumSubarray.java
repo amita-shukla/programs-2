@@ -27,11 +27,10 @@ public class DPMaximumSumSubarray {
 	public int maxSumArray(int[] nums) {
 		if(nums==null || nums.length==0) return 0;
 
-		int n = nums.length;
 		int globalMax = Integer.MIN_VALUE;
 		int maxSoFar = 0;
 
-		for (int i = 0; i < n; i++) {
+		for (int i = 0; i < nums.length; i++) {
 			maxSoFar = maxSoFar+nums[i];
 			globalMax = Math.max(maxSoFar, globalMax);
 			if(maxSoFar<0) maxSoFar =0;
@@ -45,7 +44,7 @@ public class DPMaximumSumSubarray {
 		int globalMax = Integer.MIN_VALUE;
 		int maxSoFar = 0;
 		int start = 0, end = 0;
-		int s = 0;
+
 		for (int i = 0; i < nums.length; i++) {
 			maxSoFar = maxSoFar + nums[i];
 			if(globalMax<maxSoFar){
