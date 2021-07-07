@@ -1,3 +1,4 @@
+package in.amita.practice;
 /*
 Given a string A, find length of the longest repeating sub-sequence such that the two subsequence don’t have same string character at same position,
 i.e., any i’th character in the two subsequences shouldn’t have the same index in the original string.
@@ -35,6 +36,8 @@ a   0
 b 0 
 
 */
+
+
 public class DPLRS {
     public int longestRepeatingSubsequence(String s) {
         int n = s.length();
