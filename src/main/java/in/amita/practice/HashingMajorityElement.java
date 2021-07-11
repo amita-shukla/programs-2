@@ -15,8 +15,6 @@ class HashingMajorityElement {
     /*
       O(N) and O(N)
       This is not the most efficient solution. 
-      Search Boyer-Moore Voting Algorithm that does it in O(N) and O(1). 
-      There are other approaches as well.
       https://leetcode.com/problems/majority-element/solution/
     */
     
@@ -33,5 +31,33 @@ class HashingMajorityElement {
         
         return -1;        
         
+    }
+    
+    /*
+    Below is the Moore's voting algorithm.
+    O(n) & O(1)
+    */
+    public int majorityElement(int[] nums) {
+        int potentialMaj = nums[0];
+        int majCount = 1;
+        for(int i=1; i<nums.length; i++){
+            // when the count is zero, 
+            // that means that total number of elements other than the candidate
+            // have turned up more than (or equal to) the candidate element.
+            // hence a new element takes the place of the candidate
+            if(majCount==0) potentialMaj = nums[i];
+            
+            // if you've found a distinct element, cancel it out by decreasing the count 
+            if(nums[i]!=potentialMaj){
+                majCount--;
+            }else{
+                majCount++;
+            }
+        }
+        
+        // moore's voting algorithm may be wrong if there's no element present/
+        // but since the problem says that majority element is always present,
+        // we don't need to confirm
+        return potentialMaj;
     }
 }
