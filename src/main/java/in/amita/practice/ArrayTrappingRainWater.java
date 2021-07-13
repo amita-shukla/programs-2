@@ -1,3 +1,5 @@
+package in.amita.practice;
+
 class ArrayTrappingRainWater {
     // use two arrays to maintain the max on left and max on right
     public int trap(int[] height) {
