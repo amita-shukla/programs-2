@@ -1,3 +1,7 @@
+package in.amita.practice;
+
+import java.util.*;
+
 public class MathsPrimes {
   
     /*
